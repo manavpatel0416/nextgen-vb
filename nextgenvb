@@ -1,0 +1,185 @@
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "NextGen Volleyball - Youth Volleyball Coaching in Monroe Township, NJ",
+  description:
+    "Professional volleyball coaching for kids ages 7-14 in Monroe Township, New Jersey. Group clinics and private sessions at Veterans Park beach volleyball courts. Expert coaches Manav and Akul offer skill-focused training in a fun, supportive environment.",
+  keywords: [
+    "volleyball coaching",
+    "youth volleyball",
+    "Monroe Township volleyball",
+    "New Jersey volleyball lessons",
+    "kids volleyball training",
+    "beach volleyball coaching",
+    "volleyball clinics",
+    "private volleyball lessons",
+    "Veterans Park volleyball",
+    "NextGen Volleyball",
+    "volleyball fundamentals",
+    "youth sports Monroe Township",
+  ],
+  authors: [{ name: "NextGen Volleyball" }],
+  creator: "NextGen Volleyball",
+  publisher: "NextGen Volleyball",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://v0-youth-volleyball-business-plan-bl3ap253s.vercel.app",
+    siteName: "NextGen Volleyball",
+    title: "NextGen Volleyball - Youth Volleyball Coaching in Monroe Township, NJ",
+    description:
+      "Professional volleyball coaching for kids ages 7-14 in Monroe Township, New Jersey. Group clinics and private sessions at Veterans Park beach volleyball courts.",
+    images: [
+      {
+        url: "/images/nextgen-logo.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "NextGen Volleyball Logo",
+      },
+      {
+        url: "/images/beach-courts-veterans-pic.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Beach Volleyball Courts at Veterans Park",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NextGen Volleyball - Youth Volleyball Coaching in Monroe Township, NJ",
+    description:
+      "Professional volleyball coaching for kids ages 7-14 in Monroe Township, New Jersey. Group clinics and private sessions at Veterans Park beach volleyball courts.",
+    images: ["/images/nextgen-logo.jpeg"],
+    creator: "@nextgen_vb",
+  },
+  alternates: {
+    canonical: "https://v0-youth-volleyball-business-plan-bl3ap253s.vercel.app",
+  },
+  category: "Sports & Recreation",
+  classification: "Youth Sports Coaching",
+  other: {
+    "geo.region": "US-NJ",
+    "geo.placename": "Monroe Township",
+    "geo.position": "40.3287;-74.4265",
+    ICBM: "40.3287, -74.4265",
+  },
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <head>
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="RBS-DFHQXYbPTrOikToaikBM5w0MSJ5lzvAvdEaEsnI" />
+
+        {/* Additional SEO Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#FF6B35" />
+        <meta name="msapplication-TileColor" content="#FF6B35" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="NextGen Volleyball" />
+
+        {/* Local Business Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SportsActivityLocation",
+              name: "NextGen Volleyball",
+              description: "Professional volleyball coaching for kids ages 7-14 in Monroe Township, New Jersey",
+              url: "https://v0-youth-volleyball-business-plan-bl3ap253s.vercel.app",
+              telephone: "(732) 620-6531",
+              email: "manavpatel0416@gmail.com",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "61 Avenue K, Veterans Park - Beach Volleyball Courts",
+                addressLocality: "Monroe Township",
+                addressRegion: "NJ",
+                postalCode: "08831",
+                addressCountry: "US",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 40.3287,
+                longitude: -74.4265,
+              },
+              openingHours: ["Mo-Fr 06:00-19:00", "Sa-Su 06:00-19:30"],
+              priceRange: "$10-$17.50",
+              sport: "Volleyball",
+              audience: {
+                "@type": "PeopleAudience",
+                suggestedMinAge: 7,
+                suggestedMaxAge: 14,
+              },
+              offers: [
+                {
+                  "@type": "Offer",
+                  name: "Group Volleyball Clinics",
+                  description: "60-minute group volleyball sessions for kids ages 7-14",
+                  price: "10.00",
+                  priceCurrency: "USD",
+                  availability: "https://schema.org/InStock",
+                },
+                {
+                  "@type": "Offer",
+                  name: "Private Volleyball Sessions",
+                  description: "One-on-one volleyball coaching sessions",
+                  price: "15.00",
+                  priceCurrency: "USD",
+                  availability: "https://schema.org/InStock",
+                },
+              ],
+              employee: [
+                {
+                  "@type": "Person",
+                  name: "Manav",
+                  jobTitle: "Volleyball Coach",
+                  description: "5+ years playing experience, specializes in fundamental skill development",
+                },
+                {
+                  "@type": "Person",
+                  name: "Akul",
+                  jobTitle: "Volleyball Coach",
+                  description: "4+ years playing experience, focuses on technique refinement",
+                },
+              ],
+              sameAs: ["https://www.instagram.com/nextgen_vb/"],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5",
+                reviewCount: "3",
+              },
+            }),
+          }}
+        />
+
+        {/* Favicon */}
+        <link rel="icon" href="/images/nextgen-logo.jpeg" />
+        <link rel="apple-touch-icon" href="/images/nextgen-logo.jpeg" />
+      </head>
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+}
